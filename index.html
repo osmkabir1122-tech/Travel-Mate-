@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f6fa;
+        }
+
+        header {
+            background: #34495e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .book-card {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+
+        .book-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .book-card h3 {
+            margin: 10px 0 5px;
+        }
+
+        .book-card p {
+            color: #555;
+            font-size: 14px;
+        }
+
+        footer {
+            background: #34495e;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>📚 Book Library</h1>
+    <p>Discover Your Next Favorite Book</p>
+</header>
+
+<div class="container">
+    <h2>Popular Books</h2>
+
+    <div class="book-grid">
+
+        <div class="book-card">
+            <img src="https://via.placeholder.com/200x250" alt="Book">
+            <h3>Atomic Habits</h3>
+            <p>James Clear</p>
+        </div>
+
+        <div class="book-card">
+            <img src="https://via.placeholder.com/200x250" alt="Book">
+            <h3>Rich Dad Poor Dad</h3>
+            <p>Robert Kiyosaki</p>
+        </div>
+
+        <div class="book-card">
+            <img src="https://via.placeholder.com/200x250" alt="Book">
+            <h3>The Alchemist</h3>
+            <p>Paulo Coelho</p>
+        </div>
+
+        <div class="book-card">
+            <img src="https://via.placeholder.com/200x250" alt="Book">
+            <h3>Think and Grow Rich</h3>
+            <p>Napoleon Hill</p>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Book Library | AI Assistant Enabled</p>
+</footer>
+
+<!-- Watson Assistant Chatbot -->
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "5cdccdb4-a00f-4355-ab54-6eb606ded586",
+    region: "eu-de",
+    serviceInstanceID: "0f901e3f-23ff-415e-a1b2-ca2f071ab685",
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t = document.createElement('script');
+    t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + 
+            (window.watsonAssistantChatOptions.clientVersion || 'latest') + 
+            "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+
+</body>
+</html>
